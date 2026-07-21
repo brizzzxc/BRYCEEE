@@ -25,7 +25,8 @@
      <header class="header-card">
             <img src="light.png" id="profile-img" class="profile-img">
             <div class="header-details">
-                <h1>BRYCE DANIELLE REMOLLO PORTFOLIO <img src="https://cdn-icons-png.flaticon.com/128/722/722320.png" alt="Verified" style="width: 24px; height: 24px; vertical-align: middle; margin-left: 5px;"></h1>
+                <!-- Added id="verified-icon" here -->
+                <h1>BRYCE DANIELLE REMOLLO PORTFOLIO <img src="https://cdn-icons-png.flaticon.com/128/722/722320.png" id="verified-icon" alt="Verified" style="width: 24px; height: 24px; vertical-align: middle; margin-left: 5px;"></h1>
                 <p class="subtitle">Aspiring Full-Stack Developer | Student Freelancer | UI/UX & SEO</p>
                 <div class="header-buttons">
                     <a href="mailto:remollobryce17@gmail.com" class="btn btn-primary">Send Email</a>
@@ -88,16 +89,25 @@
 
     </div>
 
-    <!-- Script for Dark Mode and Profile Image Toggle -->
+    <!-- Script for Dark Mode, Profile Image, and Icon Toggle -->
     <script>
         const toggleBtn = document.getElementById('theme-toggle');
         const profileImg = document.getElementById('profile-img');
+        const verifiedIcon = document.getElementById('verified-icon'); // Added variable for the check icon
         const body = document.body;
 
         toggleBtn.addEventListener('click', () => {
             body.classList.toggle('dark-mode');
+            const isDarkMode = body.classList.contains('dark-mode');
+
+            // Toggle Profile Image
             if (profileImg) {
-                profileImg.src = body.classList.contains('dark-mode') ? 'dark.jpg' : 'light.png';
+                profileImg.src = isDarkMode ? 'dark.jpg' : 'light.png';
+            }
+
+            // Toggle Verified Check Icon
+            if (verifiedIcon) {
+                verifiedIcon.src = isDarkMode ? 'https://cdn-icons-png.flaticon.com/128/6270/6270364.png' : 'https://cdn-icons-png.flaticon.com/128/722/722320.png';
             }
         });
     </script>
