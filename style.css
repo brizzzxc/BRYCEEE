@@ -198,6 +198,37 @@ body.dark-mode .item-subtitle,
 body.dark-mode .subtitle {
     color: #e5e7eb;
 }
+/* Base navigation styling */
+nav {
+    display: flex;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: var(--nav-bg, #ffffff); /* Matches your theme */
+    gap: 15px;
+}
+
+nav a {
+    text-decoration: none;
+    font-weight: 500;
+    color: inherit;
+    white-space: nowrap; /* Prevents text inside links from breaking mid-word */
+}
+
+/* Mobile Responsive Adjustments */
+@media screen and (max-width: 600px) {
+    nav {
+        padding: 0.75rem 1rem; /* Reduces side padding to free up space */
+        gap: 10px;             /* Tighter spacing between links */
+    }
+
+    nav a {
+        font-size: 14px;       /* Slightly smaller font size on phones */
+    }
+
+    #theme-toggle {
+        padding: 4px 8px;      /* Shrinks the toggle button padding slightly */
+    }
+}
 
 body.dark-mode nav a {
     color: #ffffff;
