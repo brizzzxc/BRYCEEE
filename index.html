@@ -93,7 +93,7 @@
     <script>
         const toggleBtn = document.getElementById('theme-toggle');
         const profileImg = document.getElementById('profile-img');
-        const verifiedIcon = document.getElementById('verified-icon'); // Added variable for the check icon
+        const verifiedIcon = document.getElementById('verified-icon'); // Target the check icon
         const body = document.body;
 
         toggleBtn.addEventListener('click', () => {
@@ -105,9 +105,10 @@
                 profileImg.src = isDarkMode ? 'dark.jpg' : 'light.png';
             }
 
-            // Toggle Verified Check Icon
+            // Toggle Check Icon source and make it white using a brightness/invert filter
             if (verifiedIcon) {
                 verifiedIcon.src = isDarkMode ? 'https://cdn-icons-png.flaticon.com/128/6270/6270364.png' : 'https://cdn-icons-png.flaticon.com/128/722/722320.png';
+                verifiedIcon.style.filter = isDarkMode ? 'brightness(0) invert(1)' : 'none';
             }
         });
     </script>
