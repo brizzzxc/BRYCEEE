@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bryce Danielle Remollo - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">Certificates</a>
+        <!-- Dark Mode Toggle Button -->
+        <button id="theme-toggle" class="btn" style="margin-left: auto;">
+            <img src="https://cdn-icons-png.flaticon.com/128/12377/12377255.png" alt="Toggle" style="width: 20px; height: 20px; vertical-align: middle;">
+        </button>
+    </nav>
+
+    <!-- Main Container -->
+    <div class="main-container">
+
+     <header class="header-card">
+            <img src="light.png" id="profile-img" class="profile-img">
+            <div class="header-details">
+                <h1>BRYCE DANIELLE REMOLLO PORTFOLIO <img src="https://cdn-icons-png.flaticon.com/128/722/722320.png" alt="Verified" style="width: 24px; height: 24px; vertical-align: middle; margin-left: 5px;"></h1>
+                <p class="subtitle">Aspiring Full-Stack Developer | Student Freelancer | UI/UX & SEO</p>
+                <div class="header-buttons">
+                    <a href="mailto:remollobryce17@gmail.com" class="btn btn-primary">Send Email</a>
+                </div>
+            </div>
+        </header>
+
+        <!-- Content Grid -->
+        <div class="content-grid">
+
+            <!-- About Me Card -->
+            <section class="content-card">
+                <h2>About Me</h2>
+                <p>
+                    My journey began with a curiosity about how things connect, which eventually led me to pursue a degree in Information Technology, majoring in Network Administration. While my core studies focus on the architecture and security of complex network systems, I am equally passionate about the digital experiences built on top of them. I believe that a solid infrastructure is only half the story; the other half is crafting the seamless, user-centric interfaces that bring technology to life.
+                </p>
+                <p style="margin-top: 15px;">
+                    I am a dedicated developer who thrives at the intersection of structural precision and creative design. Whether I am troubleshooting network protocols or architecting a robust backend, I approach every challenge with the same goal: building high-impact, scalable solutions.
+                </p>
+            </section>
+
+            <!-- Experience Card -->
+            <section class="content-card">
+                <h2>Experience</h2>
+                <ul class="info-list">
+                    <li>
+                        <div>
+                            <p class="item-title"><i class="far fa-circle" style="font-size: 10px; margin-right: 8px;"></i>Front-End Development:</p>
+                            <p class="item-subtitle">I leverage HTML and CSS to build clean, responsive, and visually accessible layouts, ensuring that every user has a consistent experience across all devices.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <p class="item-title"><i class="far fa-circle" style="font-size: 10px; margin-right: 8px;"></i>Dynamic Interactivity</p>
+                            <p class="item-subtitle">I utilize JavaScript to bridge the gap between static design and interactive functionality, turning simple web pages into dynamic, engaging applications.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <p class="item-title"><i class="far fa-circle" style="font-size: 10px; margin-right: 8px;"></i>Back-End Architecture:</p>
+                            <p class="item-subtitle">Through Laravel, I build powerful, efficient, and secure server-side applications, allowing me to manage data structures and business logic with the elegance and efficiency of the PHP ecosystem.</p>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+
+        </div>
+
+        <!-- Education Section -->
+        <div class="content-card" style="margin-top: 30px;">
+            <h2 style="margin-bottom: 10px;">Education</h2>
+            <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                <div>
+                    <p class="item-title" style="font-size: 16px;">Bachelor of Science in Information Technology Major in Network Administration</p>
+                    <p class="item-subtitle">System Plus College Foundation</p>
+                </div>
+                <span class="item-date">2023 - Present</span>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Script for Dark Mode and Profile Image Toggle -->
+    <script>
+        const toggleBtn = document.getElementById('theme-toggle');
+        const profileImg = document.getElementById('profile-img');
+        const body = document.body;
+
+        toggleBtn.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            if (profileImg) {
+                profileImg.src = body.classList.contains('dark-mode') ? 'dark.jpg' : 'light.png';
+            }
+        });
+    </script>
+</body>
+</html>
